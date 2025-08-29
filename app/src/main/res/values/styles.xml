@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <!-- Style for the rounded button shape -->
+    <style name="ShapeAppearance.App.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">40%</item>
+    </style>
+
+    <!-- Base Style for all calculator buttons -->
+    <style name="CalculatorButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.Circle</item>
+    </style>
+
+    <!-- Style for the dark grey number buttons -->
+    <style name="CalculatorButton.DarkGrey" parent="CalculatorButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="backgroundTint">#333333</item>
+    </style>
+
+    <!-- Style for the light grey top row buttons -->
+    <style name="CalculatorButton.Grey" parent="CalculatorButton">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="backgroundTint">#A5A5A5</item>
+    </style>
+
+    <!-- Style for the orange operator buttons -->
+    <style name="CalculatorButton.Orange" parent="CalculatorButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="backgroundTint">#FF9500</item>
+    </style>
+
+</resources>

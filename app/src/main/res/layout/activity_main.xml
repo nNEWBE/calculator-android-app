@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="25dp"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:fontFamily="@font/alata"
+        android:backgroundTint="#E91E63"
+        android:drawableEnd="@drawable/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/expressionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="monospace"
+        android:gravity="end"
+        android:text=""
+        android:textColor="#A5A5A5"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/resultTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- MaterialTextView for displaying the final result -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/resultTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/alata"
+        android:gravity="end"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Using a TableLayout for the button grid for simplicity and alignment -->
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- First Row of Buttons -->
+        <TableRow android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_c"
+                style="@style/CalculatorButton.Grey"
+                android:text="C" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_plus_minus"
+                style="@style/CalculatorButton.Grey"
+                android:text="+/-" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_percent"
+                style="@style/CalculatorButton.Grey"
+                android:text="%" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_divide"
+                style="@style/CalculatorButton.Orange"
+                android:text="÷" />
+        </TableRow>
+
+        <!-- Second Row of Buttons -->
+        <TableRow android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_7"
+                style="@style/CalculatorButton.DarkGrey"
+                android:text="7" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_8"
+                style="@style/CalculatorButton.DarkGrey"
+                android:text="8" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_9"
+                style="@style/CalculatorButton.DarkGrey"
+                android:text="9" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_multiply"
+                style="@style/CalculatorButton.Orange"
+                android:text="x" />
+        </TableRow>
+
+        <!-- Third Row of Buttons -->
+        <TableRow android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_4"
+                style="@style/CalculatorButton.DarkGrey"
+                android:text="4" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_5"
+                style="@style/CalculatorButton.DarkGrey"
+                android:text="5" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_6"
+                style="@style/CalculatorButton.DarkGrey"
+                android:text="6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_subtract"
+                style="@style/CalculatorButton.Orange"
+                android:text="-" />
+        </TableRow>
+
+        <!-- Fourth Row of Buttons -->
+        <TableRow android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_1"
+                style="@style/CalculatorButton.DarkGrey"
+                android:text="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_2"
+                style="@style/CalculatorButton.DarkGrey"
+                android:text="2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_3"
+                style="@style/CalculatorButton.DarkGrey"
+                android:text="3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_add"
+                style="@style/CalculatorButton.Orange"
+                android:text="+" />
+        </TableRow>
+
+        <!-- Fifth Row of Buttons -->
+        <TableRow android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_dot"
+                style="@style/CalculatorButton.DarkGrey"
+                android:text="." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_0"
+                style="@style/CalculatorButton.DarkGrey"
+                android:text="0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_backspace"
+                style="@style/CalculatorButton.DarkGrey"
+                android:text="⌫" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_equals"
+                style="@style/CalculatorButton.Orange"
+                android:text="=" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
